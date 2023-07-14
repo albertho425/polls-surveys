@@ -24,7 +24,7 @@ if (!empty($_POST)) {
     
     $stmt->execute([$title, $desc, $timestamp]);
     
-    // Below will get the last insert ID, this will be the poll id
+    // Last inserted ID
     $poll_id = $pdo->lastInsertId();
     
     
