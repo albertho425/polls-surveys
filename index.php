@@ -14,17 +14,25 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <?=template_header(" PHP Polls and Surveys", "fas fa-vote-yea fa-2x")?>
+
 <div class="container mt-5">
 
-	<h2>Polls</h2>
-	<p>Create a poll, view a poll, participate in a poll, or delete a poll</p>
-    <p>To participate in a poll, click on a poll to view, and once inside you will be able to vote or see current results</p>
+	
+    <div class="row">
+        <div class="col mt-5">
+        <h2>Polls</h2>
+            <p>Create a poll, view a poll, participate in a poll, or delete a poll</p>
+            <p>To participate in a poll, click on a poll to view, and once inside you will be able to vote or see current results</p>        
+        </div>
+
+    </div>
+	
 	<div class="mt-5 mb-5">
     <a class="btn btn-success" href="index.php">Home</a>
     <a class="btn btn-primary" href="create.php">Create New Poll</a>
     </div>
-	<table class="table table-dark table-striped">
-        <thead class="thead-dark">
+	<table class="table table-hover table-light table-striped">
+        <thead class="table-primary">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Title</th>
@@ -51,5 +59,6 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </tbody>
     </table>
 </div>
+ 
 
 <?=template_footer()?>
