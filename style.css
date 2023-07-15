@@ -266,3 +266,7 @@ body {
 .form-check {
   padding: 20px !important;
 }
+.fas {
+  padding: 5px;
+  font-size: 20px;
+}

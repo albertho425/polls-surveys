@@ -24,7 +24,6 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <p>Create a poll, view a poll, participate in a poll, or delete a poll</p>
             <p>To participate in a poll, click on a poll to view, and once inside you will be able to vote or see current results</p>        
         </div>
-
     </div>
 	
 	<div class="mt-5 mb-5">
@@ -51,8 +50,8 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?=$poll['timestamp']?></td>
                 
                 <td class="actions">
-					<a href="vote.php?id=<?=$poll['id']?>" class="view" title="View Poll"><i style="color:green;" class="fas fa-eye"></i></a>
-                    <a href="delete.php?id=<?=$poll['id']?>" class="trash" title="Delete Poll"><i style="color:red;" class="fas fa-trash"></i></a>
+					<a href="vote.php?id=<?=$poll['id']?>" class="view" title="View Poll"><i class="fas fa-eye"></i></a>
+                    <a href="delete.php?id=<?=$poll['id']?>" class="trash" title="Delete Poll"><i class="fas fa-trash"></i></a>
                 </td>
             </tr>
             <?php endforeach; ?>
