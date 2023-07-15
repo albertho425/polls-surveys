@@ -36,29 +36,34 @@ if (isset($_GET['id'])) {
 
 <?=template_header(" PHP Polls and Surveys - Participate in Poll", "fas fa-vote-yea fa-2x")?>
 
-
-<div class="container mt-5 mb-5 text-center">
-	<h2><?=$poll['title']?></h2>
-    <i class="fas fa-vote-yea fa-2x text-center"></i>
-	<p><?=$poll['desc']?></p>
-    <i class="fas fa-calendar-week fa-2x"></i>
-    <p><?=$poll['timestamp']?></p>
-    <div class="container mt-5 mb-5">
-    <p>Please choose from one of the following choices:</p>
-    <form action="vote.php?id=<?=$_GET['id']?>" method="post">
-        <?php for ($i = 0; $i < count($poll_answers); $i++): ?>
-        <label>
-            <input type="radio" name="poll_answer" value="<?=$poll_answers[$i]['id']?>"<?=$i == 0 ? ' checked' : ''?>>
-            <?=$poll_answers[$i]['title']?>
-        </label>
-        <?php endfor; ?>
+<div class="d-flex align-items-center text-center" style="min-height: 100vh">
+      <div class="box w-100 text-success">
+        <h2 class=""><?=$poll['title']?></h2>
+        <i class="fas fa-vote-yea fa-2x text-center"></i>
+        <p><?=$poll['desc']?></p>
+        <i class="fas fa-calendar-week fa-2x"></i>
+        <p><?=$poll['timestamp']?></p>
         <div class="container mt-5 mb-5">
-            <input type="submit" value="Vote" class="btn btn-primary">
-            <a class="btn btn-info" href="result.php?id=<?=$poll['id']?>">View Results</a>
-            <a class="btn btn-success" href="index.php">Home</a>
-        </div>
-    </form>
+            <p>Please choose from one of the following choices:</p>
+            <form action="vote.php?id=<?=$_GET['id']?>" method="post">
+                <?php for ($i = 0; $i < count($poll_answers); $i++): ?>
+                <label>
+                    <input type="radio" name="poll_answer" value="<?=$poll_answers[$i]['id']?>"<?=$i == 0 ? ' checked' : ''?>>
+                    <?=$poll_answers[$i]['title']?>
+                </label>
+                <?php endfor; ?>
+                <div class="container mt-5 mb-5">
+                    <input type="submit" value="Vote" class="btn btn-primary">
+                    <a class="btn btn-info" href="result.php?id=<?=$poll['id']?>">View Results</a>
+                    <a class="btn btn-success" href="index.php">Home</a>
+                </div>
+            </form>
     </div>
-</div>
+
+      </div>
+    </div>
+
+
+
 
 <?=template_footer()?>

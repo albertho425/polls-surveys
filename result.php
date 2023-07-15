@@ -31,36 +31,43 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?=template_header(" PHP Polls and Surveys - Display Results", "fas fa-vote-yea fa-2x")?>
+<?=template_header("Results", "fas fa-vote-yea fa-2x")?>
 
-
-<div class="container mt-5">
-<h2>Results</H2>
-<i class="fas fa-poll fa-2x"></i>
-<table class="table table-dark table-striped mt-5 mb-5">
-        <tr>
-            <td>Poll Qestion</td>
-            <td><?=$poll['title'];?></td>
-        </tr>
-        <tr>
-            <td>Description</td>
-	        <td><?=$poll['desc']?></td>
-        </tr>
-        <tr>
-            <td>Start of Poll</td>
-            <td><?=$poll['timestamp']?></td>
-        </tr>
-
-        <?php foreach ($poll_answers as $poll_answer): ?>
+<div class="d-flex align-items-center text-center" style="min-height: 100vh">
+    <div class="box w-100 text-success">
+      <h2>Results</H2>
+        <i class="fas fa-poll fa-2x"></i>
+        <div class="container">
+        <table class="table table-dark table-striped mt-5 mb-5">
             <tr>
-            <td><?=$poll_answer['title']?> </td>
-            <td><span>(<?=$poll_answer['votes']?> Votes)</span></td>
-            
+                <td>Poll Qestion</td>
+                <td><?=$poll['title'];?></td>
             </tr>
-         <?php endforeach; ?>
-</table>
-        <a class="btn btn-success mt-5 mb-5" href="index.php">Home</a>
-</div>
+            <tr>
+                <td>Description</td>
+                <td><?=$poll['desc']?></td>
+            </tr>
+            <tr>
+                <td>Start of Poll</td>
+                <td><?=$poll['timestamp']?></td>
+            </tr>
+
+            <?php foreach ($poll_answers as $poll_answer): ?>
+                <tr>
+                <td><?=$poll_answer['title']?> </td>
+                <td><span>(<?=$poll_answer['votes']?> Votes)</span></td>
+                
+                </tr>
+            <?php endforeach; ?>
+        </table>
+            <a class="btn btn-success mt-5 mb-5" href="index.php">Home</a>
+
+        </div>
+        
+      </div>
+    </div>
+
+
 
 
 

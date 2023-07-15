@@ -44,29 +44,31 @@ if (!empty($_POST)) {
 }
 ?>
 
-<?=template_header("PHP Polls and Surveys - Create", "fas fa-vote-yea fa-2x")?>
+<?=template_header("Create", "fas fa-vote-yea fa-2x")?>
 
-<div class="container mt-5 mb-5">
+
 	
-    <div class="container mt-5 mb-5" style="" id="wrapper">
+    <div class="container mt-5 mb-5">
     
-    <div class="form-group mt-5 col-md-10"> 
+    
+    <div class="d-flex align-items-center" style="min-height: 100vh">
+      <div class="box w-100 text-success">
 
-    <h2>Create Poll</h2>
-
-        <form method="POST" action="create.php"> 
+      <h2 class="" >Create Poll</h2>
+      
+      <form method="POST" action="create.php"> 
 
         <div class="col-md-10 mt-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" name="title" id="title" class="form-control" required>
+            <input type="text" name="title" id="title" class="form-control" placeholder="Enter title of poll/survey" maxlength="30" required>
         </div>
         <div class="col-md-10 mt-3">
             <label for="desc" class="form-label">Description</label>
-            <input type="text" name="desc" id="desc" class="form-control">
+            <input type="text" name="desc" id="desc" class="form-control" placeholder="Enter the description" maxlength="256">
         </div>
         <div class="col-md-10 mt-3">
             <label for="answers" class="form-label">Answers (per line)</label>
-            <textarea style="height: 300px;" name="answers" id="answers" class="form-control" required></textarea>
+            <textarea style="height: 200px;" name="answers" id="answers" class="form-control" required></textarea>
             
         </div>
         <div class="col-md-10 mt-5 mb-5">
@@ -74,9 +76,23 @@ if (!empty($_POST)) {
             <input type="submit" value="Create" class="btn btn-primary">
             <a class="btn btn-success" href="index.php">Home</a>
         </div>
-    </div>
+
     </form>
-    <div>
+        
+      </div>
+    </div>
+    
+
+
+
+      
+
+    
+    
+
+    
+
+    
     <!-- Confirmation Message Area -->
     <?php if ($msg): ?>
         <div class="alert alert-success text-center" role="alert">
