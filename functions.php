@@ -29,6 +29,13 @@ function pdo_connect_mysql() {
     }
 }
 
+// function numberOfRows() {
+//     $pdo = pdo_connect_mysql();
+//     $stmt = $pdo->prepare('SELECT count* FROM polls');
+//     $numOfRows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//     echo implode(" ", $numOfRows);
+// }
+
 function template_header($title, $icon)
 // load fontawesome, bootstrap, jquery and nav bar for each page
 {
@@ -88,6 +95,10 @@ echo <<<EOT
         </div>
     </div>
     </nav>
+
+    <div class="d-flex align-items-center" style="min-height: 100vh">
+      <div class="box w-100 text-success">
+
 
 EOT;
 }
