@@ -251,10 +251,18 @@ body {
   display: flex;
   height: 25px;
   min-width: 5%;
-  background-color: #38b673;
+  background-color: black;
   border-radius: 5px;
   font-size: 14px;
   color: #ffffff;
   justify-content: center;
   align-items: center;
+}
+
+.navbar-toggler {
+  background: gainsboro !important;
+}
+
+.form-check {
+  padding: 20px !important;
 }
