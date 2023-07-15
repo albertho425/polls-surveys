@@ -38,29 +38,35 @@ if (isset($_GET['id'])) {
       <h2>Results</H2>
         <i class="fas fa-poll fa-2x"></i>
         <div class="container">
-        <table class="table table-dark table-striped mt-5 mb-5">
-            <tr>
-                <td>Poll Qestion</td>
-                <td><?=$poll['title'];?></td>
-            </tr>
-            <tr>
-                <td>Description</td>
-                <td><?=$poll['desc']?></td>
-            </tr>
-            <tr>
-                <td>Start of Poll</td>
-                <td><?=$poll['timestamp']?></td>
-            </tr>
-
-            <?php foreach ($poll_answers as $poll_answer): ?>
+            <table class="table table-light table-striped mt-5 mb-5">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">Field</th>
+                        <th scope="col">Data</th>
+                    </tr>
+                </thead>
                 <tr>
-                <td><?=$poll_answer['title']?> </td>
-                <td><span>(<?=$poll_answer['votes']?> Votes)</span></td>
-                
+                    <td>Poll Qestion</td>
+                    <td><?=$poll['title'];?></td>
                 </tr>
-            <?php endforeach; ?>
-        </table>
+                <tr>
+                    <td>Description</td>
+                    <td><?=$poll['desc']?></td>
+                </tr>
+                <tr>
+                    <td>Start of Poll</td>
+                    <td><?=$poll['timestamp']?></td>
+                </tr>
+                <?php foreach ($poll_answers as $poll_answer): ?>
+                    <tr>
+                    <td><?=$poll_answer['title']?> </td>
+                    <td><span>(<?=$poll_answer['votes']?> Votes)</span></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+
             <a class="btn btn-success mt-5 mb-5" href="index.php">Home</a>
+            <a class="btn btn-info mt-5 mb-5" href="vote.php?id=<?=$poll['id']?>" title="View Poll">Back</a>
 
         </div>
         
