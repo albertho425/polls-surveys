@@ -48,39 +48,32 @@ if (!empty($_POST)) {
 
 
 	
+    
+<div class="container mt-5 mb-5">
+    <h2>Create Poll</h2>
+
+    <form method="POST" action="create.php"> 
     <div class="container mt-5 mb-5">
-    
-    
-    <div class="d-flex align-items-center" style="min-height: 100vh">
-      <div class="box w-100 text-success">
-
-      <h2 class="" >Create Poll</h2>
-      
-      <form method="POST" action="create.php"> 
-
-        <div class="col-md-10 mt-3">
+        <div class="col-md-6-offset-6">
             <label for="title" class="form-label">Title</label>
             <input type="text" name="title" id="title" class="form-control" placeholder="Enter title of poll/survey" maxlength="30" required>
         </div>
-        <div class="col-md-10 mt-3">
+        <div class="col-md-6-offset-3">
             <label for="desc" class="form-label">Description</label>
             <input type="text" name="desc" id="desc" class="form-control" placeholder="Enter the description" maxlength="256">
         </div>
-        <div class="col-md-10 mt-3">
+        <div class="col-md-6-offset-3">
             <label for="answers" class="form-label">Answers (per line)</label>
-            <textarea style="height: 200px;" name="answers" id="answers" class="form-control" required></textarea>
-            
+            <textarea style="height: 200px;" name="answers" id="answers" class="form-control" required></textarea><br><br>
         </div>
-        <div class="col-md-10 mt-5 mb-5">
-            
+        <div class="col-md-6-offset-3">
             <input type="submit" value="Create" class="btn btn-primary">
             <a class="btn btn-success" href="index.php">Home</a>
         </div>
-
-    </form>
-        
-      </div>
     </div>
+    </form>
+ </div>
+    
     
 
 

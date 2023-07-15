@@ -13,7 +13,7 @@ $stmt = $pdo->query('SELECT p.*,
 $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<?=template_header(" PHP Polls and Surveys", "fas fa-vote-yea fa-2x")?>
+<?=template_header("Polls and Surveys", "fas fa-vote-yea fa-2x")?>
 
 <div class="container mt-5">
 
@@ -34,7 +34,7 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <thead class="table-primary">
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Title</th>
+                <th scope="col">Poll</th>
 				<th scope="col">Answers</th>
                 <th scope="col">Timestamp</th>
                 <th scope="col">Actions</th>
