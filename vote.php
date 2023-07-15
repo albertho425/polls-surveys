@@ -34,36 +34,46 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?=template_header(" PHP Polls and Surveys - Participate in Poll", "fas fa-vote-yea fa-2x")?>
+<?=template_header("Vote", "fas fa-vote-yea fa-2x")?>
 
 <div class="d-flex align-items-center text-center" style="min-height: 100vh">
       <div class="box w-100 text-success">
         <h2 class=""><?=$poll['title']?></h2>
-        <i class="fas fa-vote-yea fa-2x text-center"></i>
-        <p><?=$poll['desc']?></p>
-        <i class="fas fa-calendar-week fa-2x"></i>
-        <p><?=$poll['timestamp']?></p>
-        <div class="container mt-5 mb-5">
-            <p>Please choose from one of the following choices:</p>
-            <form action="vote.php?id=<?=$_GET['id']?>" method="post">
-                <?php for ($i = 0; $i < count($poll_answers); $i++): ?>
-                <label>
-                    <input type="radio" name="poll_answer" value="<?=$poll_answers[$i]['id']?>"<?=$i == 0 ? ' checked' : ''?>>
-                    <?=$poll_answers[$i]['title']?>
-                </label>
-                <?php endfor; ?>
+        <div class="container mt-5 text-center">
+        <div class="card border-dark mb-3">
+            <div class="card-header"><i class="fas fa-vote-yea"></i><br><?=$poll['desc']?></div>
+            <div class="card-body text-dark">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                
                 <div class="container mt-5 mb-5">
-                    <input type="submit" value="Vote" class="btn btn-primary">
-                    <a class="btn btn-info" href="result.php?id=<?=$poll['id']?>">View Results</a>
-                    <a class="btn btn-success" href="index.php">Home</a>
+                    <div class="form-check">
+                        <p>Please choose from one of the following choices:</p><br>
+                        <form action="vote.php?id=<?=$_GET['id']?>" method="post">
+                            <?php for ($i = 0; $i < count($poll_answers); $i++): ?>
+                                <label class="form-check-label">
+                                    <input class="vote" type="radio" name="poll_answer" value="<?=$poll_answers[$i]['id']?>"<?=$i == 0 ? ' checked' : ''?>>
+                                    <?=$poll_answers[$i]['title']?>
+                                </label>
+                            <?php endfor; ?>
+                        </form>
+                    </div>
+                    <div class="container mt-5 mb-5">
+                        <input type="submit" value="Vote" class="btn btn-primary">
+                        <a class="btn btn-info" href="result.php?id=<?=$poll['id']?>">View Results</a>
+                        <a class="btn btn-success" href="index.php">Home</a>
+                    </div>
+                        
+                    <div class="text-muted">
+                    <i class="fas fa-calendar-week"></i>
+                        <span>Created on: </span>
+                        <?=$poll['timestamp']?>
+                    </div>
                 </div>
-            </form>
-    </div>
-
-      </div>
-    </div>
-
-
-
+            </div>
+        </div>
+    </div>        
+</div>
+</div>
 
 <?=template_footer()?>
