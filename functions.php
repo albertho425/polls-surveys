@@ -52,6 +52,7 @@ echo <<<EOT
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     
@@ -64,64 +65,34 @@ echo <<<EOT
   <body>
 
   <nav class="navbar bg-body-tertiary fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Survey App</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="create.php">New Survey</a>
-          </li>
-          
-        </ul>
-        
-      </div>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Survey App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create.php">New Survey</a>
+                </li>     
+            </ul>
+        </div>
+        </div>
     </div>
-  </div>
-</nav>
+    </nav>
 
 EOT;
 }
 //*******************************************
 
-
-// Template header, feel free to customize this
-function template_headerOriginal($title) {
-    echo <<<EOT
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="utf-8">
-            <title>$title</title>
-            <link href="style.css" rel="stylesheet" type="text/css">
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-        </head>
-        <body>
-        <div class="container mt-5">
-        
-            <div class="row">
-            <div class="col">
-                <h1>Voting & Poll System</h1>
-                <a href="index.php"><i class="fas fa-poll fa-2x"></i>Polls and Surveys</a>
-                
-
-            </div>
-            </div>
-            
-        
-         </div>
-    EOT;
-    }
 
     
     
