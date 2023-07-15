@@ -74,7 +74,7 @@ if (isset($_GET['id'])) {
                             <div class="text-muted">
                             <i class="fas fa-calendar-week"></i>
                                 <span>Created on: </span>
-                                <?=$poll['timestamp']?>
+                                <?php formatDate($poll['timestamp']);?>
                             </div>
                         </div>
                     </div> 

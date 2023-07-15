@@ -29,6 +29,20 @@ function pdo_connect_mysql() {
     }
 }
 
+/**
+ * Convert the datetime from database and output date
+ */
+
+function formatDate($input) {
+
+    $timestamp = strtotime($input);
+    $new_date_format = date('Y-m-d', $timestamp);
+    echo $new_date_format;
+    
+}
+
+
+
 // function numberOfRows() {
 //     $pdo = pdo_connect_mysql();
 //     $stmt = $pdo->prepare('SELECT count* FROM polls');

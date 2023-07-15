@@ -47,7 +47,8 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?=$poll['id']?></td>
                 <td><?=$poll['title']?></td>
 				<td><?=$poll['answers']?></td>
-                <td><?=$poll['timestamp']?></td>
+                <td><?php formatDate($poll['timestamp']);
+                ?></td>
                 
                 <td class="actions">
 					<a href="vote.php?id=<?=$poll['id']?>" class="view" title="View Poll"><i class="fas fa-eye"></i></a>
@@ -55,9 +56,12 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </td>
             </tr>
             <?php endforeach; ?>
+            <?php
+            ?>
         </tbody>
     </table>
 </div>
  
+
 
 <?=template_footer()?>
