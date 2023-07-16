@@ -36,11 +36,28 @@
 
 .btn.btn-primary {
   background-color: var(--lightblue) !important;
+  border: 1px solid var(--lightblue);
 }
 
 .card-header {
   background: var(--darkblue) !important;
   color: var(--white) !important;
+}
+
+.btn.btn-success {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.btn.btn-danger {
+  background-color: var(--darkblue);
+  border: 1px solid var(--darkblue);
+}
+
+.btn.btn-info {
+  background-color: var(--greenblue);
+  color: white;
+  border: 1px solid var(--green);
 }
 
 thead {
@@ -228,6 +245,11 @@ body {
 .update form input[type='submit']:hover {
   background-color: #32a367;
 }
+
+.yesno {
+  padding: 10px !important;
+}
+
 .delete .yesno {
   display: flex;
 }

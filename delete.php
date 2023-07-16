@@ -65,7 +65,7 @@ if (isset($_GET['id'])) {
 	
 
     <table class="table table-hover table-light table-striped mt-5">
-        <thead class="table-primary">
+        <thead class="table-success">
             <tr>
                 <th scope="col">Field</th>
                 <th scope="col">Data</th>
@@ -95,12 +95,15 @@ if (isset($_GET['id'])) {
             </tr>
         </tbody>
     </table>
-        <p>Are you sure you want to delete poll #<?=$poll['id']?>?</p>
+        <p class="mt-5">Are you sure you want to delete poll #<?=$poll['id']?>?</p>
             
     <div class="yesno">
         <a class="btn btn-danger" href="delete.php?id=<?=$poll['id']?>&confirm=yes">Yes</a>
         <a class="btn btn-primary" href="delete.php?id=<?=$poll['id']?>&confirm=no">No</a>  
     </div>
+
+    
+
     <?php endif; ?>
 </div>
 

@@ -34,13 +34,17 @@ if (isset($_GET['id'])) {
 
 <?=template_header("Results", "fas fa-vote-yea fa-2x")?>
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+
+
 <div class="d-flex align-items-center text-center" style="min-height: 100vh">
     <div class="box w-100">
       <h2>Results</H2>
         <i class="fas fa-poll fa-2x"></i>
         <div class="container">
             <table class="table table-light table-striped mt-5 mb-5">
-                <thead class="table-primary">
+                <thead class="table-success">
                     <tr>
                         <th scope="col">Field</th>
                         <th scope="col">Data</th>
@@ -74,10 +78,11 @@ if (isset($_GET['id'])) {
 
             <a class="btn btn-success mt-5 mb-5" href="index.php">Home</a>
             <a class="btn btn-info mt-5 mb-5" href="vote.php?id=<?=$poll['id']?>" title="View Poll">Back</a>
+          
             
 
         </div>
-        
+
       </div>
     </div>
 

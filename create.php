@@ -74,18 +74,6 @@ if (!empty($_POST)) {
     </form>
  </div>
     
-    
-
-
-
-      
-
-    
-    
-
-    
-
-    
     <!-- Confirmation Message Area -->
     <?php if ($msg): ?>
         <div class="alert alert-success text-center" role="alert">
