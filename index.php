@@ -11,6 +11,12 @@ $stmt = $pdo->query('SELECT p.*,
                     GROUP BY p.id');
 
 $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$res = $pdo->query('SELECT COUNT(*) FROM polls');
+$num_rows = $res->fetchColumn();
+echo $num_rows;
+echo "hi";
+
 ?>
 
 <?=template_header("Polls and Surveys", "fas fa-vote-yea fa-2x")?>
@@ -27,11 +33,10 @@ $polls = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 	
 	<div class="mt-5 mb-5">
-    <a class="btn btn-success" href="index.php">Home</a>
-    <a class="btn btn-primary" href="create.php">Create New Poll</a>
+    <a class="btn btn-primary btn-large" href="create.php">Create New Poll</a>
     </div>
 	<table class="table table-hover table-light table-striped">
-        <thead class="table-primary">
+        <thead class="table-success">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Poll</th>

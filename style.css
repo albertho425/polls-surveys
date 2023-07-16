@@ -7,6 +7,44 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+:root {
+ --green: #00bf6f;
+--lightblue: #588392;
+--greenblue: #438771;
+--darkblue: #05467e;
+--black: #1e2124;
+--grey: #333e48;
+--white: white;
+}
+
+.navbar {
+  background-color: var(--green) !important;
+}
+
+.navbar-toggler
+{
+  border: 1px solid white;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.btn.btn-primary {
+  background-color: var(--lightblue) !important;
+}
+
+.card-header {
+  background: var(--darkblue) !important;
+  color: var(--white) !important;
+}
+
+thead {
+  background: var(--green) !important;
+}
+
 body {
   background-color: #ffffff;
   margin: 0;
@@ -17,6 +55,15 @@ body {
   width: 100%;
   border: 0;
 }
+
+.fas.fa-eye {
+  color: var(--greenblue);
+}
+
+.fas.fa-trash {
+  color: var(--lightblue);
+}
+
 .navtop div {
   display: flex;
   margin: 0 auto;
@@ -273,4 +320,10 @@ body {
 
 .container {
   text-align: center !important;
+}
+
+
+#chart-container {
+  width: 100%;
+  height: auto;
 }
