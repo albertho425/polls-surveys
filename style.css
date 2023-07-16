@@ -17,6 +17,7 @@
 --black: #1e2124;
 --grey: #333e48;
 --white: white;
+--lightgrey: #d3dae0;
 }
 
 .navbar {
@@ -25,11 +26,12 @@
 
 .navbar-toggler
 {
-  border: 1px solid white;
+  border: 1px solid var(--green)
 }
 
 .navbar-brand {
-  color: white;
+  color: var(--white);
+ 
 }
 
 .btn.btn-primary {
@@ -327,3 +329,4 @@ body {
   width: 100%;
   height: auto;
 }
+
