@@ -1,6 +1,5 @@
-
-
 window.onload = getData();
+// window.onload = greeting();
 
 
 /**
@@ -18,8 +17,7 @@ async function getData() {
       if (response.ok) {
           console.log("the IP API result is: " , result);
          
-          let ipAdress = result.ip;
-          
+          let ipAdress = result.ip;  
           let countryCode = result.country_code;
           getFlagEmoji(countryCode);
           
@@ -125,3 +123,38 @@ let getFlagEmoji = (e) => {
     console.log(countryEmoji);
     countryIcon.innerHTML = countryEmoji;
   }
+
+
+
+
+
+  function greeting() {
+  
+      let theGreeting = document.getElementById("greeting");
+      console.log(theGreeting);
+      const hour = new Date().getHours();
+      const welcomeTypes = ["Good morning", "Good afternoon", "Good evening"];
+      let message = "";
+  
+      console.log("greeting is " + theGreeting);
+      console.log("the hours is: " + hour);
+  
+      if (hour < 12) {
+          console.log("hour < 12");
+          message = welcomeTypes[0];
+  
+      }
+      else if (hour < 18) {
+          console.log("hour < 18");
+          message = welcomeTypes[1];
+      }
+      else {
+          console.log("else");
+          message = welcomeTypes[2];
+      }
+  
+      theGreeting.innerHTML = message;
+      console.log("the message is: " + message);
+  
+  }
+  

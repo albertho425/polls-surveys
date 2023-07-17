@@ -28,6 +28,7 @@ echo "hi";
         <div class="col mt-5">
         <h2>Polls</h2>
       
+            <!-- <p id="greeting">Greeting message.</p> -->
             <p>Create a poll, view a poll, participate in a poll, or delete a poll</p>
             <p>To participate in a poll, click on a poll to view, and once inside you will be able to vote or see current results</p>        
 

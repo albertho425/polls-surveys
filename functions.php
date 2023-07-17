@@ -121,7 +121,7 @@ echo <<<EOT
             <span class="data" id="countryEmoji">Country</span>
             <span class="data" id="localTime">Time</span>
         </p>
-
+            
         </div>
         </div>
     </div>
