@@ -106,6 +106,7 @@ echo <<<EOT
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
+        
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door menu-icon"></i><span class="nav-item-text">Home</span></a>
@@ -114,6 +115,13 @@ echo <<<EOT
                     <a class="nav-link" href="create.php"><i class="bi bi-pencil-square"></i><span class="nav-item-text">Add new poll</span></a></a>
                 </li>     
             </ul>
+            <hr><p class="infoBar">
+            <span class="data" id="weatherTemp"></span><span> F</span>
+            <span class="data" id="weatherIcon">Icon</span>
+            <span class="data" id="countryEmoji">Country</span>
+            <span class="data" id="localTime">Time</span>
+        </p>
+
         </div>
         </div>
     </div>
