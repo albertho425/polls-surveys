@@ -7,6 +7,7 @@
 --grey: #333e48;
 --white: white;
 --lightgrey: #d3dae0;
+
 }
 
 .navbar {
@@ -364,4 +365,18 @@ body {
 
 .bi {
   font-size: 32px !important;
+}
+
+
+.infoBar {
+  text-align: center;
+  font-size: 14px !important;
+}
+
+.data {
+  padding: 10px;
+}
+
+#countryEmoji {
+  font-size: 24px;
 }
