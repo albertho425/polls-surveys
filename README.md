@@ -7,7 +7,7 @@ This is a fun PHP and JavaScript exericse that lets you practice creating, updat
 
 ## See all polls
 
-<img width="1920" alt="Poll_see_all_polls" src="https://github.com/maplesyrupweb/polls-surveys/assets/73809301/9f27f3a2-7700-48e5-a071-01300b113f10">
+<img width="1920" alt="Poll_list" src="https://github.com/maplesyrupweb/polls-surveys/assets/73809301/ff29ade8-0974-4c8d-83fa-d022b97842e0">
 
 
 ## Create a new poll
