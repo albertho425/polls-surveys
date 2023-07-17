@@ -41,7 +41,7 @@ if (isset($_GET['id'])) {
 <div class="d-flex align-items-center text-center" style="min-height: 100vh">
     <div class="box w-100">
       <h2>Results</H2>
-        <i class="fas fa-poll fa-2x"></i>
+        <i class="bi bi-bar-chart"></i>
         <div class="container">
             <table class="table table-light table-striped mt-5 mb-5">
                 <thead class="table-success">

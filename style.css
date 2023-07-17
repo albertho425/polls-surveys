@@ -1,14 +1,3 @@
-* {
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen,
-    ubuntu, cantarell, 'fira sans', 'droid sans', 'helvetica neue', Arial,
-    sans-serif;
-  font-size: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
 :root {
  --green: #00bf6f;
 --lightblue: #588392;
@@ -40,7 +29,7 @@
 }
 
 .card-header {
-  background: var(--darkblue) !important;
+  background: var(--greenblue) !important;
   color: var(--white) !important;
 }
 
@@ -57,7 +46,7 @@
 .btn.btn-info {
   background-color: var(--greenblue);
   color: white;
-  border: 1px solid var(--green);
+  border: 1px solid var(--greenblue);
 }
 
 thead {
@@ -352,3 +341,27 @@ body {
   height: auto;
 }
 
+.form-control {
+  background-color: var(--lightgrey) !important;
+}
+
+.offcanvas-header {
+  background-color: var(--green) !important;
+  color: var(--white) !important;
+}
+
+.nav-link {
+  font-size: 20px !important;
+}
+
+.bi.bi-house-door.menu-icon {
+  padding-right: 5px !important;
+}
+
+.bi.bi-pencil-square {
+  padding-right: 5px !important;
+}
+
+.bi {
+  font-size: 32px !important;
+}
